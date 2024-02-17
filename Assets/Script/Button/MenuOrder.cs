@@ -28,11 +28,11 @@ public class MenuOrder : MonoBehaviour
         }
         if(this.gameObject.name == "Menu3Add")
         {
-            PlayerData.MenuList.Add("Cat");
+            PlayerData.MenuList.Add("Toast");
         }
         if(this.gameObject.name == "Menu4Add")
         {
-            PlayerData.MenuList.Add("Shark");
+            PlayerData.MenuList.Add("Naporitan");
         }
     }
 }

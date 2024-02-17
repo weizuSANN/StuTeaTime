@@ -39,13 +39,13 @@ public class RestClick : MonoBehaviour
                     Timer.RestTime = 6;
                     Timer.AllRestMin += 6;
                 }
-                else if(PlayerData.MenuList[0] == "Cat")
+                else if(PlayerData.MenuList[0] == "Toast")
                 {
                     Timer.StartMoney -= 500;
                     Timer.RestTime = 15;
                     Timer.AllRestMin += 15;
                 }
-                else if(PlayerData.MenuList[0] == "Shark")
+                else if(PlayerData.MenuList[0] == "Naporitan")
                 {
                     Timer.StartMoney -= 1000;
                     Timer.RestTime = 30;

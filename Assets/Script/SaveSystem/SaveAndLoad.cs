@@ -46,6 +46,7 @@ public class SaveAndLoad : MonoBehaviour
             {
                 SaveData.First = PlayerData.First;
                 SaveData.Coins = PlayerData.Money;
+                SaveData.OrderMenu = PlayerData.OrderMenu;
                 Save(SaveData);
                 SaveOK = true;
             }

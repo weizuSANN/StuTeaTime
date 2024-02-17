@@ -17,6 +17,7 @@ public class PlayerData : MonoBehaviour
     SaveAndLoad SaveAndLoad;
     SoundPlayer SoundPlayer;
     public SaveData SaveData;
+    public List<string> OrderMenu = new List<string>();
     public List<string> MenuList = new List<string>();
     string FilePath;
     public bool First = false;
@@ -82,6 +83,7 @@ public class PlayerData : MonoBehaviour
             StudyUI.SetActive(false);
             MenuUI.SetActive(false);
             TextScript.Message("マスター" , "おや。始めてご来店のお客さんかい？<>うちは他所の喫茶店と違って勉強に集中してもらう<>ことをコンセプトにしているんだ。<>これからも足繁く通ってほしいからね。<>サービスでコーヒー一杯無料にしといてあげよう。" , 0.05f);
+            OrderMenu.Add("コーヒー");
             Money += 100;
         }
         else
