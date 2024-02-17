@@ -2048,6 +2048,10 @@ MonoBehaviour:
     LoopStartTime: 0
     EndTime: 56
     Memo: "\u86CD\u306E\u5149\nhttps://howlingindicator.net/closed/"
+  - Audio: {fileID: 8300000, guid: 8b4c820b698314f4c859180f370c0e52, type: 3}
+    LoopStartTime: 0
+    EndTime: 97
+    Memo: "\u30BF\u30A4\u30C8\u30EB\u4E0D\u660E\n\u30EA\u30F3\u30AF"
   Audio: {fileID: 0}
   Delay: 0
   IsIntroEnd: 0

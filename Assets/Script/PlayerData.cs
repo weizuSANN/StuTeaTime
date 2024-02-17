@@ -73,6 +73,7 @@ public class PlayerData : MonoBehaviour
     IEnumerator StartIn()
     {
         yield return new WaitUntil(() => SaveAndLoad.LoadEnd);
+        SoundPlayer.SoundID = 2;
         //ロード
         //上書き
         if(First == false)
