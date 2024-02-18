@@ -98,13 +98,14 @@ public class TextScript : MonoBehaviour
                 else
                 {
                     NonClickTime += Time.deltaTime;
-                    if(NonClickTime >= 1.0f)
+                    if(NonClickTime >= 2.0f)
                     {
                         Audio.PlayOneShot(SE[1]);
                         i = 0;
                         NowText++;
                         Text.text = "";
                         delay = 0.0f;
+                        NonClickTime = 0.0f;
                         IsMaxText = false;
                         if(NowText >= MsgArray.Length)
                         {

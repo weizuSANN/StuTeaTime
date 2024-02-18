@@ -105,9 +105,9 @@ public class PlayerData : MonoBehaviour
         SoundPlayer.SoundID = 1;
         TextScript.Message("マスター" , "遅くまでお疲れ様。<>そろそろ閉店の時間だ。勉強は切り上げて帰りな。<>ほら。カード出しな。今日の分のスタンプだよ。<>次回出してもらえればコーヒー一杯サービスするからさ。<>これからもご贔屓にお願いね" , 0.05f);
         yield return new WaitUntil(() => TextScript.IsTextEnd);
+        SaveAndLoad.SaveData.TotalCount += 1;
         //スタンプ
         //yield return new waituntil(() => スタンプ押し完了)
-        TotalStamp += 1;
         //if(TotalStamp % 4 = 0)
         // for(int i = 0; i <= 16; i++)
         // {

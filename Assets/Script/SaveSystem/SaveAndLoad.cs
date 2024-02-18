@@ -81,5 +81,14 @@ public class SaveData
     public int TotalSec;
     public int TotalMin;
     public int TotalHou;
+    public int TotalCount;
     public List<string> OrderMenu = new List<string>();
+    public EventBool EventProgress;
+}
+[System.Serializable]
+public class EventBool
+{
+    public int Cat;
+    public int Master;
+    public int Bird;
 }
