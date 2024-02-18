@@ -3573,6 +3573,7 @@ GameObject:
   - component: {fileID: 846622905}
   - component: {fileID: 846622904}
   - component: {fileID: 846622906}
+  - component: {fileID: 846622907}
   m_Layer: 0
   m_Name: Illust
   m_TagString: Untagged
@@ -3619,7 +3620,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 59ba558cb01265447b47c644a7c2c8a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3517e847134b1024b816fb1962840ca6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3649,6 +3650,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8248f43a79ed1ad449fd466362f822be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &846622907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846622902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad726eb73d6c494d86d8b4a8747c85d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeSpan: 0
+  LastMin: 0
+  i: 1
+  Sprites:
+  - {fileID: 21300000, guid: 3517e847134b1024b816fb1962840ca6, type: 3}
+  - {fileID: 21300000, guid: e7b1b3b17037b384c90ec9a010ae7225, type: 3}
+  - {fileID: 21300000, guid: c03b80e03f858e340ac7dd6c2be2a42e, type: 3}
 --- !u!1 &867218312
 GameObject:
   m_ObjectHideFlags: 0
