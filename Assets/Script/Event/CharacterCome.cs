@@ -57,7 +57,7 @@ public class CharacterCome : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ID = Random.Range(0 , 3);
+        ID = Random.Range(0 , 3);
         if(Timer.HourPlusMin / EventSpan != LastMin)
         {
             StartCoroutine(Event(ID));
@@ -66,6 +66,10 @@ public class CharacterCome : MonoBehaviour
     }
     IEnumerator Event(int ID)
     {
+        if(Cus == true)
+        {
+            ID = 1;
+        }
         if(Cat == true)
         {
             ID = 2;
@@ -82,9 +86,21 @@ public class CharacterCome : MonoBehaviour
         if(ID == 0)
         {
             //客
-            if(SaveAndLoad.SaveData.EventProgress.Master >= 1 && SaveAndLoad.SaveData.EventProgress.Bird >= 2)
+            if(SaveAndLoad.SaveData.EventProgress.Master >= 1 && SaveAndLoad.SaveData.EventProgress.Bird >= 2 && SaveAndLoad.SaveData.TotalCount > 5)
             {
                 //客&白猫
+                Customer.SetActive(true);
+                RectTransform CuRect = Customer.GetComponent<RectTransform>();
+                Image CuImg = Customer.GetComponent<Image>();
+                CuImg.sprite = Sprites[2];
+                Vector3 start = new Vector3(1297 , -689 , 0);
+                CuRect.localPosition = start;
+                for(int i= 0; i <= 255; i++)
+                {
+                    CuRect.localPosition += new Vector3(-4.8f , 2.8f);
+                    yield return new WaitForSeconds(0.01f);
+                }
+                CuImg.sprite = Sprites[3];
             }
             else
             {

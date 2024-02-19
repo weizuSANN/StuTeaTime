@@ -45,13 +45,14 @@ public class CheckOut : MonoBehaviour
         }
         else
         {
-            AllMoney = PlayerData.MenuList.Count(n => n == "Coffee") * 100 + PlayerData.MenuList.Count(n => n == "Omrice") * 200 + PlayerData.MenuList.Count(n => n == "Cat") * 500 + PlayerData.MenuList.Count(n => n == "Shark") * 1000;
+            AllMoney = PlayerData.MenuList.Count(n => n == "Coffee") * 100 + PlayerData.MenuList.Count(n => n == "Omrice") * 600 + PlayerData.MenuList.Count(n => n == "Toast") * 300 + PlayerData.MenuList.Count(n => n == "Naporitan") * 400;
             if(AllMoney > PlayerData.Money)
             {
                 MoneyOverPop.SetActive(true);
             }
             else
             {
+                PlayerData.OrderList = PlayerData.MenuList;
                 PlayerData.Hour = Hour;
                 PlayerData.Min = Min;
                 PlayerData.GameMode = "Study";

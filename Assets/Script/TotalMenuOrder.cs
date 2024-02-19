@@ -21,7 +21,7 @@ public class TotalMenuOrder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AllMoney = AllMoney = PlayerData.MenuList.Count(n => n == "Coffee") * 100 + PlayerData.MenuList.Count(n => n == "Omrice") * 200 + PlayerData.MenuList.Count(n => n == "Cat") * 500 + PlayerData.MenuList.Count(n => n == "Shark") * 1000;;
+        AllMoney = AllMoney = PlayerData.MenuList.Count(n => n == "Coffee") * 100 + PlayerData.MenuList.Count(n => n == "Omrice") * 600 + PlayerData.MenuList.Count(n => n == "Toast") * 300 + PlayerData.MenuList.Count(n => n == "Naporitan") * 400;
         Text.text = "合計金額：" + AllMoney + "円";
     }
 }

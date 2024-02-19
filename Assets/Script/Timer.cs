@@ -8,11 +8,13 @@ public class Timer : MonoBehaviour
     GameObject SystemManager;
     PlayerData PlayerData;
     SaveAndLoad SaveAndLoad;
+    GameObject EventUI;
     RestClick RestClick;
     public int Sec;
     public int Min;
     public int Hou;
     public int StartMoney;
+    public int TrueStudyMoney;
     public int MoneySpan = 20;
     public int HourPlusMin;
     public int Last20Min;
@@ -39,6 +41,7 @@ public class Timer : MonoBehaviour
         SystemManager = GameObject.Find("SystemManager");
         PlayerData = SystemManager.GetComponent<PlayerData>();
         SaveAndLoad = SystemManager.GetComponent<SaveAndLoad>();
+        EventUI = GameObject.Find("EventUI");
     }
 
     // Update is called once per frame
@@ -52,6 +55,7 @@ public class Timer : MonoBehaviour
             {
                 StudyStartTime = DateTime.Now;
                 StartMoney = PlayerData.Money;
+                TrueStudyMoney = StartMoney;
                 b = true;
             }
             TotalTime = (DateTime.Now - StudyStartTime) - AllTotalRestTime;
@@ -115,6 +119,7 @@ public class Timer : MonoBehaviour
             {
                 PlayerData.GameMode = "Study";
                 RestClick.Resting = false;
+                EventUI.SetActive(true);
             }
         }
     }

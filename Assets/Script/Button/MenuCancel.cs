@@ -21,19 +21,34 @@ public class MenuCancel : MonoBehaviour
     {
         if(this.gameObject.name == "Menu1Cancel")
         {
-            PlayerData.MenuList.RemoveAt(PlayerData.MenuList.LastIndexOf("Coffee"));
+            if(PlayerData.MenuList.Count != 0)
+            {
+                PlayerData.MenuList.RemoveAt(PlayerData.MenuList.LastIndexOf("Coffee"));
+            }
         }
         if(this.gameObject.name == "Menu2Cancel")
         {
-            PlayerData.MenuList.RemoveAt(PlayerData.MenuList.LastIndexOf("Omrice"));
+            if(PlayerData.MenuList.Count != 0)
+            {
+                PlayerData.MenuList.RemoveAt(PlayerData.MenuList.LastIndexOf("Omrice"));
+            }
+            
         }
         if(this.gameObject.name == "Menu3Cancel")
         {
-            PlayerData.MenuList.RemoveAt(PlayerData.MenuList.LastIndexOf("Cat"));
+            if(PlayerData.MenuList.Count != 0)
+            {
+                PlayerData.MenuList.RemoveAt(PlayerData.MenuList.LastIndexOf("Toast"));
+            }
+            
         }
         if(this.gameObject.name == "Menu4Cancel")
         {
-            PlayerData.MenuList.RemoveAt(PlayerData.MenuList.LastIndexOf("Shark"));
+            if(PlayerData.MenuList.Count != 0)
+            {
+                PlayerData.MenuList.RemoveAt(PlayerData.MenuList.LastIndexOf("Naporitan"));
+            }
+            
         }
     }
 }

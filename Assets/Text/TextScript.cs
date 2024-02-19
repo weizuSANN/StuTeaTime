@@ -6,6 +6,8 @@ using System.Text.RegularExpressions;
 
 public class TextScript : MonoBehaviour
 {
+    //場合による
+    Image CharacterImage;
     //テキスト表示必須項目
     public bool NonClick;
     public bool IsTextEnd;
@@ -33,6 +35,8 @@ public class TextScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //場合による
+        CharacterImage = GameObject.Find("CharacterImage").GetComponent<Image>();
         //テキスト表示必須項目
         TextUI = GameObject.Find("TextUI");
         TextCanvas = GameObject.Find("TextCanvas");
@@ -98,7 +102,7 @@ public class TextScript : MonoBehaviour
                 else
                 {
                     NonClickTime += Time.deltaTime;
-                    if(NonClickTime >= 2.0f)
+                    if(NonClickTime >= 1.0f)
                     {
                         Audio.PlayOneShot(SE[1]);
                         i = 0;
@@ -124,7 +128,7 @@ public class TextScript : MonoBehaviour
             }
         }
     }
-    public void Message(string TextName , string Msg , float Speed = 0.05f , bool EnableClick = false)
+    public void Message(string TextName , string Msg , float Speed = 0.05f , bool EnableClick = false , Sprite Picture = null)
     {
         //テキスト表示必須項目
         TextSpeed = Speed;
@@ -138,6 +142,7 @@ public class TextScript : MonoBehaviour
         TextMessage = Msg;
         StartMessage = true;
         NonClick = EnableClick;
+        CharacterImage.sprite = Picture;
     }
     /*string[] WordWrap(string Msg)
     {
