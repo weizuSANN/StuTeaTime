@@ -6,6 +6,7 @@ using System.Linq;
 
 public class CheckOut : MonoBehaviour
 {
+    public AudioClip SE;
     GameObject SystemManager;
     PlayerData PlayerData;
     TextScript TextScript;
@@ -15,6 +16,7 @@ public class CheckOut : MonoBehaviour
     int Min;
     GameObject TimeSelectPop;
     GameObject MoneyOverPop;
+    AudioSource AudioSource;
     public int AllMoney;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class CheckOut : MonoBehaviour
         TextScript = SystemManager.GetComponent<TextScript>();
         HourLabel = GameObject.Find("HourLabel").GetComponent<Text>();
         MinLabel = GameObject.Find("MinLabel").GetComponent<Text>();
+        AudioSource = GameObject.Find("SoundEffect").GetComponent<AudioSource>();
         TimeSelectPop = GameObject.Find("TimeSelectPop");
         MoneyOverPop = GameObject.Find("MoneyOverPop");
         MoneyOverPop.SetActive(false);
@@ -58,6 +61,7 @@ public class CheckOut : MonoBehaviour
                 PlayerData.GameMode = "Study";
             }
         }
+        AudioSource.PlayOneShot(SE);
     }
     
 }

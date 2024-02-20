@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class MenuOrder : MonoBehaviour
 {
+    public AudioClip SE;
     PlayerData PlayerData;
+    AudioSource AudioSource;
     // Start is called before the first frame update
     void Start()
     {
         PlayerData = GameObject.Find("SystemManager").GetComponent<PlayerData>();
+        AudioSource = GameObject.Find("SoundEffect").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,5 +37,7 @@ public class MenuOrder : MonoBehaviour
         {
             PlayerData.MenuList.Add("Naporitan");
         }
+
+        AudioSource.PlayOneShot(SE);
     }
 }

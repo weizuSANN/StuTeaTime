@@ -5,11 +5,14 @@ using System.Linq;
 
 public class MenuCancel : MonoBehaviour
 {
+    public AudioClip SE;
     PlayerData PlayerData;
+    AudioSource AudioSource;
     // Start is called before the first frame update
     void Start()
     {
         PlayerData = GameObject.Find("SystemManager").GetComponent<PlayerData>();
+        AudioSource = GameObject.Find("SoundEffect").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -50,5 +53,6 @@ public class MenuCancel : MonoBehaviour
             }
             
         }
+        AudioSource.PlayOneShot(SE);
     }
 }
