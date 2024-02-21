@@ -177,7 +177,7 @@ public class CharacterCome : MonoBehaviour
                 CloverRect.localPosition += new Vector3(50 , -30 , 0);
                 
             }
-            else if(SaveAndLoad.SaveData.EventProgress.Master >= 1 && SaveAndLoad.SaveData.EventProgress.Bird == 1)
+            else if(SaveAndLoad.SaveData.EventProgress.Master >= 1 && SaveAndLoad.SaveData.EventProgress.Bird >= 3)
             {
                 //親子
                 ParentBird.SetActive(true);

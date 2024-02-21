@@ -2212,6 +2212,10 @@ MonoBehaviour:
     LoopStartTime: 0
     EndTime: 97
     Memo: "\u30BF\u30A4\u30C8\u30EB\u4E0D\u660E\n\u30EA\u30F3\u30AF"
+  - Audio: {fileID: 8300000, guid: 784b7aba35074184e83d4b4bc834040c, type: 3}
+    LoopStartTime: 0
+    EndTime: 189
+    Memo: "\u30BF\u30A4\u30C8\u30EB\u4E0D\u660E\n\u30EA\u30F3\u30AF"
   Audio: {fileID: 0}
   Delay: 0
   IsIntroEnd: 0
@@ -6103,6 +6107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3714693455944044eafc3358a31a7078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SE: {fileID: 8300000, guid: 32fbcffbbaf295a4b8a10df8f5afa17d, type: 3}
   Price: 0
   Resting: 0
 --- !u!1 &1229989687

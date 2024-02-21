@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TextOutput : MonoBehaviour
 {
+    public AudioClip SE;
+    AudioSource AudioSource;
     GameObject TextOuter;
     Text Text;
     [TextArea(1 , 30)]
@@ -15,6 +17,7 @@ public class TextOutput : MonoBehaviour
     {
         TextOuter = GameObject.Find("TextOuter");
         Text = GameObject.Find("Text").GetComponent<Text>();
+        AudioSource = GameObject.Find("SoundEffect").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -61,5 +64,6 @@ public class TextOutput : MonoBehaviour
             TextOuter.SetActive(true);
             Text.text = Content;
         }
+        AudioSource.PlayOneShot(SE);
     }
 }

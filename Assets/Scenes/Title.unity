@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c367b43d7ec17240a645ffc68b57f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SE: {fileID: 8300000, guid: 32fbcffbbaf295a4b8a10df8f5afa17d, type: 3}
 --- !u!114 &110105785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,6 +1020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7c5bfa15231a047b07d9809fbc48bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SE: {fileID: 8300000, guid: 32fbcffbbaf295a4b8a10df8f5afa17d, type: 3}
   Content: 
 --- !u!1 &697891149
 GameObject:
@@ -1354,6 +1356,134 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1185534301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185534303}
+  - component: {fileID: 1185534302}
+  m_Layer: 0
+  m_Name: SoundEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1185534302
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185534301}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1185534303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185534301}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1385.4355, y: 918.9058, z: -20.863762}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1236808097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,6 +1630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7c5bfa15231a047b07d9809fbc48bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SE: {fileID: 8300000, guid: 32fbcffbbaf295a4b8a10df8f5afa17d, type: 3}
   Content: "\u5E97\u306B\u5165\u3063\u305F\u3089\u3001\u307E\u305A\u306F\u673A\u306E\u4E0A\u306B\u3042\u308B\u30E1\u30CB\u30E5\u30FC\u3092\u898B\u3066\u307F\u307E\u3057\u3087\u3046\u3002\n\u30E1\u30CB\u30E5\u30FC\u3092\u307F\u3066\u3001\u6CE8\u6587\u3059\u308B\u3082\u306E\u3068\u3001\u52C9\u5F37\u6642\u9593\u3092\u6C7A\u3081\u3001\u30C1\u30A7\u30C3\u30AF\u30DE\u30FC\u30AF\u3092\u62BC\u3057\u3066\u304F\u3060\u3055\u3044\u3002\n\u3042\u3068\u306F\u52C9\u5F37\u306B\u96C6\u4E2D\u3057\u307E\u3057\u3087\u3046\u3002\u75B2\u308C\u305F\u3089\u4F11\u61A9\u3092\u62BC\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
 --- !u!1 &1518765568
 GameObject:
@@ -1653,7 +1784,12 @@ MonoBehaviour:
     TotalSec: 0
     TotalMin: 0
     TotalHou: 0
+    TotalCount: 0
     OrderMenu: []
+    EventProgress:
+      Cat: 0
+      Master: 0
+      Bird: 0
   LoadEnd: 0
   SaveOK: 0
 --- !u!1 &1749245320
@@ -1956,6 +2092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7c5bfa15231a047b07d9809fbc48bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SE: {fileID: 8300000, guid: 32fbcffbbaf295a4b8a10df8f5afa17d, type: 3}
   Content: "https://howlingindicator.net\n\n\u66F2\u540D \u300ETomorrow\u300F\r\n\u4F5C\u66F2
     RYU ITO\u3000\r\nhttps://ryu110.com/"
 --- !u!1 &2061483494
@@ -2110,3 +2247,4 @@ SceneRoots:
   - {fileID: 200538840}
   - {fileID: 829221405}
   - {fileID: 1560419700}
+  - {fileID: 1185534303}

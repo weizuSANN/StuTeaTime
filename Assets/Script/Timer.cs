@@ -5,6 +5,7 @@ using System;
 
 public class Timer : MonoBehaviour
 {
+    SoundPlayer SoundPlayer;
     GameObject SystemManager;
     PlayerData PlayerData;
     SaveAndLoad SaveAndLoad;
@@ -42,6 +43,7 @@ public class Timer : MonoBehaviour
         PlayerData = SystemManager.GetComponent<PlayerData>();
         SaveAndLoad = SystemManager.GetComponent<SaveAndLoad>();
         EventUI = GameObject.Find("EventUI");
+        SoundPlayer = GameObject.Find("SoundPlayer").GetComponent<SoundPlayer>();
     }
 
     // Update is called once per frame
@@ -120,6 +122,7 @@ public class Timer : MonoBehaviour
                 PlayerData.GameMode = "Study";
                 RestClick.Resting = false;
                 EventUI.SetActive(true);
+                SoundPlayer.SoundID = 2;
             }
         }
     }
