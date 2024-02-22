@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
     SaveAndLoad SaveAndLoad;
     GameObject EventUI;
     RestClick RestClick;
+    GameObject RestingText;
     public int Sec;
     public int Min;
     public int Hou;
@@ -32,6 +33,8 @@ public class Timer : MonoBehaviour
     public int RestHou;
     public DateTime RestStartTime;
     public TimeSpan TotalRestTime;
+    GameObject Food;
+    RectTransform IllustRect;
 
 
 
@@ -44,6 +47,9 @@ public class Timer : MonoBehaviour
         SaveAndLoad = SystemManager.GetComponent<SaveAndLoad>();
         EventUI = GameObject.Find("EventUI");
         SoundPlayer = GameObject.Find("SoundPlayer").GetComponent<SoundPlayer>();
+        RestingText = GameObject.Find("Resting");
+        Food = GameObject.Find("Food");
+        IllustRect = GameObject.Find("Illust").GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
@@ -119,10 +125,14 @@ public class Timer : MonoBehaviour
             RestSec = TotalRestTime.Seconds;
             if(TotalRestTime.Minutes >= RestTime)
             {
+                IllustRect.localPosition = new Vector3(0 , 118 , 0);
+                IllustRect.localScale = new Vector3(1.2f , 1.2f , 0);
+                Food.SetActive(false);
                 PlayerData.GameMode = "Study";
                 RestClick.Resting = false;
                 EventUI.SetActive(true);
                 SoundPlayer.SoundID = 2;
+                RestingText.SetActive(false);
             }
         }
     }

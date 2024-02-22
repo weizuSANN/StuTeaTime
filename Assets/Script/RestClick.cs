@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class RestClick : MonoBehaviour
 {
@@ -17,6 +18,12 @@ public class RestClick : MonoBehaviour
     GameObject SystemManager;
     SaveAndLoad SaveAndLoad;
     SoundPlayer SoundPlayer;
+    GameObject RestingText;
+    GameObject Food;
+    Image FoodImage;
+    public List<Sprite> FoodSprite = new List<Sprite>();
+    RectTransform IllustRect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +36,12 @@ public class RestClick : MonoBehaviour
         SaveAndLoad = SystemManager.GetComponent<SaveAndLoad>();
         AudioSource = GameObject.Find("SoundEffect").GetComponent<AudioSource>();
         SoundPlayer = GameObject.Find("SoundPlayer").GetComponent<SoundPlayer>();
+        RestingText = GameObject.Find("Resting");
+        Food = GameObject.Find("Food");
+        FoodImage = Food.GetComponent<Image>();
+        IllustRect = GameObject.Find("Illust").GetComponent<RectTransform>();
+        Food.SetActive(false);
+        RestingText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -125,9 +138,29 @@ public class RestClick : MonoBehaviour
             PlayerData.GameMode = "Rest";
             if(PlayerData.MenuList.Count != 0)
             {
+                Food.SetActive(true);
+                if(PlayerData.MenuList[0] == "Coffee")
+                {
+                    FoodImage.sprite = FoodSprite[0];
+                }
+                else if(PlayerData.MenuList[0] == "Toast")
+                {
+                    FoodImage.sprite = FoodSprite[1];
+                }
+                else if(PlayerData.MenuList[0] == "Omrice")
+                {
+                    FoodImage.sprite = FoodSprite[2];
+                }
+                else if(PlayerData.MenuList[0] == "Naporitan")
+                {
+                    FoodImage.sprite = FoodSprite[3];
+                }
                 PlayerData.MenuList.RemoveAt(0);
                 Timer.RestStartTime = DateTime.Now;
                 PlayerData.Money = Timer.StartMoney + (Timer.HourPlusMin / Timer.MoneySpan) * 100;
+                IllustRect.localPosition = new Vector3(250 , 508 , 0);
+                IllustRect.localScale = new Vector3(2.5f , 2.5f , 0);
+                RestingText.SetActive(true);
                 Resting = true;
             }
         }
