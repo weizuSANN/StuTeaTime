@@ -153,12 +153,14 @@ public class PlayerData : MonoBehaviour
         {
             yield return new WaitForSeconds(2.0f);
             Stamp1.SetActive(true);
+            SaveAndLoad.SaveData.TotalCount += 1;
         }
         else if(SaveAndLoad.SaveData.TotalCount % 4 == 1)
         {
             Stamp1.SetActive(true);
             yield return new WaitForSeconds(2.0f);
             Stamp2.SetActive(true);
+            SaveAndLoad.SaveData.TotalCount += 1;
         }
         else if(SaveAndLoad.SaveData.TotalCount % 4 == 2)
         {
@@ -166,6 +168,7 @@ public class PlayerData : MonoBehaviour
             Stamp2.SetActive(true);
             yield return new WaitForSeconds(2.0f);
             Stamp3.SetActive(true);
+            SaveAndLoad.SaveData.TotalCount += 1;
         }
         else if(SaveAndLoad.SaveData.TotalCount % 4 == 3)
         {
@@ -174,6 +177,7 @@ public class PlayerData : MonoBehaviour
             Stamp3.SetActive(true);
             yield return new WaitForSeconds(2.0f);
             Stamp4.SetActive(true);
+            SaveAndLoad.SaveData.TotalCount += 1;
             if(SaveAndLoad.SaveData.TotalCount == 4)
             {
                 SaveAndLoad.SaveData.OrderMenu.Add("トースト");
@@ -187,8 +191,6 @@ public class PlayerData : MonoBehaviour
                 SaveAndLoad.SaveData.OrderMenu.Add("オムライス");
             }
         }
-        
-        SaveAndLoad.SaveData.TotalCount += 1;
         //クリアの表示
         //yield return new WaitUntil(() => )
         //シーンリロード

@@ -28,9 +28,11 @@ public class SaveAndLoad : MonoBehaviour
             }
             else
             {
-                SaveData Data = Load();
-                PlayerData.First = Data.First;
-                PlayerData.Money = Data.Coins;
+                SaveData = Load();
+                PlayerData.First = SaveData.First;
+                PlayerData.Money = SaveData.Coins;
+                PlayerData.OrderMenu = SaveData.OrderMenu;
+                Debug.Log("LoadCompleted");
                 LoadEnd = true;
             }
         }
@@ -48,6 +50,7 @@ public class SaveAndLoad : MonoBehaviour
                 SaveData.Coins = PlayerData.Money;
                 SaveData.OrderMenu = PlayerData.OrderMenu;
                 Save(SaveData);
+                Debug.Log("SaveCompleted");
                 SaveOK = true;
             }
         }
