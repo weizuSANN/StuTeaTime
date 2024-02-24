@@ -81,15 +81,15 @@ public class RestClick : MonoBehaviour
                 }
                 else if(PlayerData.MenuList[0] == "Omrice")
                 {
-                    Timer.StartMoney -= 200;
-                    Timer.RestTime = 6;
-                    Timer.AllRestMin += 6;
+                    Timer.StartMoney -= 600;
+                    Timer.RestTime = 18;
+                    Timer.AllRestMin += 18;
                 }
                 else if(PlayerData.MenuList[0] == "Toast")
                 {
-                    Timer.StartMoney -= 500;
-                    Timer.RestTime = 15;
-                    Timer.AllRestMin += 15;
+                    Timer.StartMoney -= 300;
+                    Timer.RestTime = 9;
+                    Timer.AllRestMin += 9;
                     if(SaveAndLoad.SaveData.EventProgress.Bird == 0 && SaveAndLoad.SaveData.TotalCount > 3)
                     {
                         EventUI.SetActive(false);
@@ -112,9 +112,9 @@ public class RestClick : MonoBehaviour
                 }
                 else if(PlayerData.MenuList[0] == "Naporitan")
                 {
-                    Timer.StartMoney -= 1000;
-                    Timer.RestTime = 30;
-                    Timer.AllRestMin += 30;
+                    Timer.StartMoney -= 400;
+                    Timer.RestTime = 12;
+                    Timer.AllRestMin += 12;
                     if(SaveAndLoad.SaveData.EventProgress.Cat == 0 && SaveAndLoad.SaveData.TotalCount > 4 && SaveAndLoad.SaveData.EventProgress.Master >= 1)
                     {
                         EventUI.SetActive(false);
