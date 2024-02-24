@@ -180,11 +180,11 @@ public class PlayerData : MonoBehaviour
             SaveAndLoad.SaveData.TotalCount += 1;
             if(SaveAndLoad.SaveData.TotalCount == 4)
             {
-                SaveAndLoad.SaveData.OrderMenu.Add("トースト");
+                SaveAndLoad.SaveData.OrderMenu.Add("ナポリタン");
             }
             else if(SaveAndLoad.SaveData.TotalCount == 8)
             {
-                SaveAndLoad.SaveData.OrderMenu.Add("ナポリタン");
+                SaveAndLoad.SaveData.OrderMenu.Add("トースト");
             }
             else if(SaveAndLoad.SaveData.TotalCount == 12)
             {
