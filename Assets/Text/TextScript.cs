@@ -102,7 +102,7 @@ public class TextScript : MonoBehaviour
                 else
                 {
                     NonClickTime += Time.deltaTime;
-                    if(NonClickTime >= 1.0f)
+                    if(NonClickTime >= 3.0f)
                     {
                         Audio.PlayOneShot(SE[1]);
                         i = 0;
